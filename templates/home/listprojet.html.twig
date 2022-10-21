@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+      <html>
+      
+      <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <title></title>
+          <meta name="description" content="An interactive getting started guide for Brackets." />
+          
+       
+          <link href="http://localhost/mysite/public/css/tableau.css" rel="stylesheet"  >
+       
+     
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+        crossorigin="anonymous">
+          
+        {% block stylesheets %} 
+        {{ encore_entry_link_tags('app') }} {% endblock %}    
+
+        {% block javascripts %}
+
+
+        {% endblock  %}
+        
+        </head>
+        <body>
+          <div class="site-container">
+<h2>Liste des offres </h2><br>
+<h1><a href="{{path('app_user')}}">retourner</h1>
+          </div>
+
+
+<table class="tableau-style">
+<thead>
+<tr>
+<th></th>
+<th>Titre</th>
+<th>description </th>
+<th>budget</th>
+<th>date_depot</th>
+<th>duree</th>
+<th>categorie</th>
+<th>is disponible</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+{% for Projet in listProjets %}
+<tr>
+<td>{{Projet.id}}</td>
+<td>{{Projet.Titre |upper}}</td>
+<td>{{Projet.description }}</td>
+<td>{{Projet.budget}}</td>
+<td>{{Projet.getDateDepot() |date('d-m-Y')}}</td>
+<td>{{Projet.duree}}</td>
+
+<td>{{Projet.CategorieProjet}}</td>
+<td>{{Projet.disponible}}</td>
+<td>
+<a class="btn btn-success" href="#">Postuler</a>
+
+
+</td>
+</tr>
+{% else %}
+<tr>
+<td colspan="5">Aucun abonné</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% block body %}
+{% endblock %}

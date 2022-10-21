@@ -1,0 +1,66 @@
+                *,
+                 ::before,
+                 ::after {
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                body {
+                    height: 100vh;
+                    font-family: arial, Helvetica, sans-serif;
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('http://localhost/mysite/public/img/bg.jpeg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    height: 100vh;
+                    width: 100vh;
+                    padding: 0 8%;
+                }
+                
+                .tableau-style {
+                    border-collapse: collapse;
+                    min-width: 400px;
+                    width: auto;
+                    box-shadow: 0 5px50 px rgba(0, 0, 0, 0.15);
+                    cursor: pointer;
+                    margin: 100px auto;
+                    border: 2px solid midnightblue;
+                    /* border: 1px solid#ddd;*/
+                }
+                
+                thead tr {
+                    background-color: midnightblue;
+                    color: #fff;
+                    text-align: left;
+                }
+                
+                th,
+                td {
+                    padding: 15px 20px;
+                }
+                
+                tbody tr,
+                td,
+                th {
+                    border: 1px solid #ddd;
+                }
+                
+                tbody tr:nth-child(even) {
+                    background-color: #f3f3f3;
+                }
+                
+                tbody tr:last-of-type {
+                    border-bottom: 2px solid midnightblue;
+                }
+                
+                .site-container h2 {
+                    font-size: 60px;
+                    text-align: center;
+                    color: transparent;
+                    -webkit-text-stroke: 1px #fff;
+                    background: url('http://localhost/mysite/public/img/pattern.png');
+                    -webkit-background-clip: text;
+                    background-position: 0 0;
+                    animation: animate 20s linear 0s infinite alternate;
+                }

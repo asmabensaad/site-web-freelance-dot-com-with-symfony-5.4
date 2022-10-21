@@ -1,0 +1,24 @@
+{% extends 'users.html.twig' %}
+{% block title %}Profil de {{ app.user.Username }} {% endblock %}
+
+{% block body %}
+	
+<div class="grix xs4 container">
+    <div class="col-xs4">
+        <h1>Profil de {{ app.user.Username }}</h1></div>
+		<div class="col-xs1">Nom :</div>
+		<div class="col-xs3">{{ app.user.Username }}</div>
+		
+		<div class="col-xs1">Email :</div>
+		<div class="col-xs3">{{ app.user.email }}</div>
+		<div class="col-xs4">
+            <a href="{{ path('freelncerInfo')}}" class="btn blue">Completer profil</a>
+           
+            
+        </div>
+    </div>
+
+
+		
+
+{% endblock %}

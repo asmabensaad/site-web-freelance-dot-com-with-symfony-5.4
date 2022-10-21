@@ -1,0 +1,82 @@
+* {
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(http://localhost/mysite/public/img/freelance-part-time.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.parent h2 {
+    text-align: center;
+    color: rgb(255, 196, 0);
+    font-size: 30px;
+}
+
+.parent {
+    background-color: rgba(10, 5, 0, 0.5);
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+    margin: 10px auto;
+}
+
+.parent label {
+    color: rgb(4, 4, 10);
+    font-family: 'Arial', Helvetica, sans-serif;
+    font-size: medium;
+    line-height: 1.6;
+    font-size: 15px;
+    text-align: left;
+}
+
+.parent input {
+    display: block;
+    position: relative;
+    left: 50px;
+    margin-bottom: 10px;
+}
+
+.parent input[type="text"],
+input[type="password"],
+input[type="email"] {
+    padding: 10px;
+    width: 270px;
+    border: none;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.parent input[type="submit"],
+input[type="reset"] {
+    padding: 7px 113px;
+    background-color: #b10093;
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    border-radius: 11px;
+}
+
+.parent input[type="submit"],
+input[type="reset"]:hover {
+    background-color: rgb(0, 68, 255);
+    color: #ffffff;
+}
+
+p {
+    position: relative;
+    top: 180px;
+    left: 15px;
+}
+
+p a {
+    text-decoration: none;
+    color: #0094ff;
+}
+
+p a:hover {
+    color: aliceblue;
+}

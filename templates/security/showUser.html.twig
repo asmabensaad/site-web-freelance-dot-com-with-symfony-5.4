@@ -1,0 +1,9 @@
+
+{% block title %}Fiche utilisateur{% endblock %}
+{% block body %}
+<link href="http://localhost/mysite/public/css/style2.css" rel="stylesheet"  >
+<h1>Detail</h1>
+<h3>{{user.username}}</h3>
+<h2>succé d'inscription</h2>
+<a  class="btn btn-outline-success" href="{{ path('app_login')}}" >se connecter</a>
+{% endblock %}

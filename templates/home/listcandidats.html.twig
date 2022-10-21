@@ -1,0 +1,39 @@
+{% extends "base.html.twig"%}
+{% block body %}
+<h2>Liste des entreprises |<small> Ajouter </small> </h1><br>
+
+
+<table class="table table-hover table-striped table table-centered table table-bordered" border="1">
+<thead>
+<tr>
+<th>#</th>
+<th>Nom entreprise</th>
+<th>email </th>
+<th>Adresse</th>
+
+<th>telephone</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+{% for entreprise in lesentreprises %}
+<tr>
+<td>{{entreprise.id}}</td>
+<td>{{entreprise.nomentreprise |upper}}</td>
+<td>{{entreprise.email }}</td>
+<td>{{entreprise.Adresse}}</td>
+<td>{{entreprise.telephone}}</td>
+<td>
+<a class="btn btn-primary" href="#">consulter profil</a>
+<a class="btn btn-info" href="#">Modifier</a>
+
+</td>
+</tr>
+{% else %}
+<tr>
+<td colspan="5">Aucun abonné</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}
